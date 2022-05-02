@@ -1,10 +1,11 @@
 #!/bin/bash
-cd gatsby-site
+cd gatsby-starter-blog-Prometheus-Blog
 yarn build
-cd ../cra-site
+cd ../Prometheus-Website-main
 yarn build
-rm -rf ../gatsby-site/public/cra
-mv build ../gatsby-site/public/cra
-cd ../gatsby-site
+# rm -rf ../gatsby-starter-blog-Prometheus-Blog/public/cra
+mv build ../gatsby-starter-blog-Prometheus-Blog/public/cra
+cd ../gatsby-starter-blog-Prometheus-Blog
 cp ../_redirects public/
-netlify deploy --dir=public --prod
+# netlify deploy --dir=public --prod
+./deploy
