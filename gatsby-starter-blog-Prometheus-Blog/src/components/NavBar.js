@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import index from 'Prometheus-MainSite-Blog/Prometheus-Website-main/src/index.js'
 
 export default class NavBar extends Component {
   render() {
     return (
       <div>
+        <BrowserRouter>
+        <Routes>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Prometheus Logo</a>
@@ -12,7 +16,7 @@ export default class NavBar extends Component {
     </button>
     <div  id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+        <Route class="nav-link active" aria-current="page" exact path="/" src={index} />
         <a class="nav-link active" aria-current="page" href="#">ABOUT</a>
         <a class="nav-link active" aria-current="page" href="#">SERVICES</a>
         <a class="nav-link active" aria-current="page" href="#">TEAM</a>
@@ -20,10 +24,14 @@ export default class NavBar extends Component {
         <a class="nav-link active" aria-current="page" href="#">ADVISORS</a>
         <a class="nav-link active" aria-current="page" href="#">CONTACT</a>
       </div>
-    </div>
+    </div> 
   </div>
 </nav>
+</Routes>
+</BrowserRouter>
+
       </div>
+     
     )
   }
 }

@@ -178,6 +178,10 @@ class Header extends React.Component {
               <a href="#advisors" class="nav-items" onClick={this.handleClick}>
                 ADVISORS
               </a>
+              <a href="/" class="nav-items" onClick={this.handleClick}>
+                BLOG
+              </a>
+
               <a
                 href="#contact"
                 onClick={this.handleClick}
